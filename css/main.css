@@ -30,20 +30,37 @@ main{
 }
 .header2{
     background-color: rgba(255, 255, 255, 0);
-    width: 100%;
-    border-bottom: 3px solid grey;
+    width: 980px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.menu-urls{
+    height: 80px;
+    border-bottom: 3px solid grey; 
 }
 .menu ul li{
     display: inline-block; 
     color: rgb(134, 134, 134);
+    height: 53px;
+}
+.menu ul li:hover{
+    border-bottom: 3px solid rgb(7, 172, 248);
+}
+.menu ul li a:hover{
+    color: rgb(7, 172, 248);
 }
 .menu ul li a{
     color: rgb(134, 134, 134);
     text-decoration: none; /*remove o hiperlink dos botões com links*/
     font-size: 18px;
     text-transform: uppercase;
-    margin-left: 70px;
+    margin-left: 20px;
 }
 .menu{
+    width: 60%;
+}
+.col-100{
     width: 100%;
+    float: left;
+    position: relative;
 }
