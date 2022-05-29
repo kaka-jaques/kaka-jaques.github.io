@@ -1,66 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body{
     width: 100%;
     height: 100%;
     margin: 0 auto; /*alinha a pagina com o navegador e remove a barra inferior de movimento */
+    background-color: rgb(252, 252, 252);
+    font-family: 'Roboto',sans-serif;
 }
 .main-menu{
     width: 100%;
-    background-color: rgb(195, 229, 240);
-    height: 70px;
+    background-color: rgb(255, 255, 255);
+    height: 150px;
 }
-main{
-    margin: 0 auto;
-    width: 980px;
-    position: relative;
-}
-.logo{
-    padding: 10px;
+.profile-pic{
     float: left;
-    margin-left: 30px;
-    width: 60%;
+    margin-left: 50px;
+    margin-top: 25px;
 }
-.social ul li{
-    display: inline-block; /* deixar a lista lado a lado sem pontos */
-    float: left;
-    margin-left: 10px;
+.profile-pic img{
+    border-radius: 80px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: -10px;
+    margin-bottom: 2px;
 }
-.social{
-    width: 30%;
+.borda{
+    background-color: rgb(44, 44, 44);
+    border-radius: 90px;
+    width: 110%;
+
+}
+.navbars{
+    width: 75%;
     float: right;
+    margin-top: 70px;
 }
-.header2{
-    background-color: rgba(255, 255, 255, 0);
-    width: 980px;
-    margin: 0 auto;
-    padding: 10px;
-}
-.menu-urls{
-    height: 80px;
-    border-bottom: 3px solid grey; 
-}
-.menu ul li{
-    display: inline-block; 
-    color: rgb(134, 134, 134);
-    height: 53px;
-}
-.menu ul li:hover{
-    border-bottom: 3px solid rgb(7, 172, 248);
-}
-.menu ul li a:hover{
-    color: rgb(7, 172, 248);
-}
-.menu ul li a{
-    color: rgb(134, 134, 134);
-    text-decoration: none; /*remove o hiperlink dos botões com links*/
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-left: 20px;
-}
-.menu{
-    width: 60%;
-}
-.col-100{
-    width: 100%;
+.navbars ul li{
     float: left;
-    position: relative;
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 20px;
+}
+.navbars ul li a{
+    color: rgb(116, 116, 116);
+    text-decoration: none;
 }
