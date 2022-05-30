@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 body{
     width: 100%;
@@ -7,15 +8,17 @@ body{
     background-color: rgb(252, 252, 252);
     font-family: 'Roboto',sans-serif;
 }
-.main-menu{
+.menu{
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    height: 150px;
+    height: 170px;
+    margin-top: -30px;
+    background-color: #205375;
+    border-radius: 15px;
 }
 .profile-pic{
     float: left;
     margin-left: 50px;
-    margin-top: 25px;
+    margin-top: 55px;
 }
 .profile-pic img{
     border-radius: 80px;
@@ -42,6 +45,13 @@ body{
     font-size: 20px;
 }
 .navbars ul li a{
-    color: rgb(116, 116, 116);
+    color: rgb(14, 14, 14);
     text-decoration: none;
+}
+.context{
+    margin-top: 100px;
+    margin-left: 80px;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 70%;
+    height: 800px;
 }
