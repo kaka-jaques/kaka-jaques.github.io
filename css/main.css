@@ -16,9 +16,12 @@ body{
     border-radius: 15px;
     display: flex;
 }
-.menu .line{
-    display: none;
-    height: 3px;
+.line{
+    height: 5px;
+    width: 35px;
+    border-radius: 10px;
+    background-color: black;
+    margin-top: 7px;
 }
 .profile-pic{
     float: left;
@@ -52,6 +55,7 @@ body{
 }
 .desktop-menu{
     display: flex;
+    padding-left: 150px;
 }
 .navbars ul li a{
     color: rgb(14, 14, 14);
@@ -60,15 +64,21 @@ body{
 }
 .context{
     margin-top: 250px;
-    margin-left: 200px;
+    margin-left: 100px;
 }
 .resume{
     padding-top: 10px;
     padding-left: 70px;
+    padding-right: 150px;
 }
 
 #back-to-top{
     position: fixed;
     bottom: 50px;
     right: 50px;
+}
+#mobile-menu{
+    position: fixed;
+    top: 40px;
+    right: 100px;
 }
