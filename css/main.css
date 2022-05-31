@@ -41,7 +41,7 @@ body{
 .navbars ul li{
     float: left;
     display: inline-block;
-    margin-left: 100px;
+    padding-left: 100px;
     font-size: 25px;
 }
 .navbars ul li a{
@@ -49,6 +49,6 @@ body{
     text-decoration: none;
 }
 .context{
-    margin-top: 200px;
-    margin-left: 100px;
+    margin-top: 350px;
+    margin-left: 300px;
 }
