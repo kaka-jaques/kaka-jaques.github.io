@@ -5,6 +5,7 @@ var displayWid = window.screen.width;
 
 back.click(function() {
   $('html, body').animate({scrollTop:0}, 'slow');
+  //back.animate({bottom:-80},'medium');
 });
 
 $(document).ready(function(){
