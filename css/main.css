@@ -66,6 +66,9 @@ body{
     text-decoration: none;
     display: flex;
 }
+.navbars ul li a:hover{
+    color: white;
+}
 .context{
     margin-top: 250px;
     margin-left: 100px;
