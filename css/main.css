@@ -1,120 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-
-body{
-    /*width: 100%;
-    height: 100%;*/
-    margin: 0 auto; /*alinha a pagina com o navegador e remove a barra inferior de movimento */
-    background-color: rgb(252, 252, 252);
-    font-family: 'Roboto',sans-serif;
-}
-.menu{
-    width: 100%;
-    height: 170px;
-    margin-top: -30px;
-    background-color: #205375;
-    border-radius: 15px;
-    display: flex;
-}
-.line{
-    height: 5px;
-    width: 35px;
-    border-radius: 10px;
-    background-color: black;
-    margin-top: 7px;
-}
-.top1{
-    display: block;
-    width: 5px;
-    height: 35px;
-}
-.profile-pic{
-    float: left;
-    margin-left: 50px;
-    margin-top: 55px;
-}
-.profile-pic img{
-    border-radius: 140px;
-    margin-top: 5px;
-    margin-left: 6px;
-    margin-right: -15px;
-    margin-bottom: 2px;
-}
-.borda{
+#borda{
     background-color: rgb(44, 44, 44);
-    border-radius: 140px;
-    width: 110%;
+    border-radius: 200px;
+    height: 320px;
+    width: 320px;
+    margin-left: 80px;
 }
-.navbars{
-   display: flex;
-   align-items: center;
-   justify-content: center;
+main{
+    margin-top: 250px;
 }
-.navbars ul li{
-    display: inline-block;
-    padding-top: 60px;
-    padding-left: 70px;
-    padding-right: 5px;
-    font-size: 25px;
+.nav-option{
+    text-align: center;
+    font-size: 23px;
+    margin-top: 40px;
+    margin-left: 80px;
 }
-.desktop-menu{
-    display: flex;
-    padding-left: 150px;
+.col-1{
+    width: 155px;
 }
-.navbars ul li a{
-    color: rgb(14, 14, 14);
+.nav-option a{
     text-decoration: none;
-    display: flex;
+    color: black;
 }
-.navbars ul li a:hover{
+.nav-option a:hover{
     color: white;
 }
-.context{
-    margin-top: 250px;
-    margin-left: 100px;
-    font-size: 25px;
+.nav-option img{
+    width: 40px;
 }
-.resume{
-    padding-top: 10px;
-    padding-left: 70px;
-    padding-right: 250px;
-}
-#back-to-top{
-    position: fixed;
-    cursor: pointer;
-    bottom: 50px;
-    right: 50px;
-    width: 80px;
-    height: 80px;
-    border: 3px solid rgb(14, 14, 14);
-    border-left-color: cyan;
-    border-radius: 50px;
-    background-color: #205375;
-}
-#back-to-top:hover{
-    animation: back-spinner 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-}
-@keyframes back-spinner{
-    from{
-        transform: rotate(0);
-    }to{
-        transform: rotate(-45deg)
-    }
-}
-#mobile-menu{
-    display: none;
-}
-@media screen and (max-width:1294px) {
-    #mobile-menu{
-        display: block;
-        position: fixed;
-        top: 40px;
-        right: 100px;
-    }
-    .desktop-menu{
-        display: none;
-    }
-}
-@media screen {
+@media (max-width<1850 ){
     
 }
