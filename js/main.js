@@ -37,3 +37,9 @@ function redirect(element){
         window.location.replace("../lang/fr.html");
     }
 }
+
+function sendSucessful(){
+    $("#send-success").attr("class", "alert alert-success alert-dismissible fade show")
+    $("#send-success").append("<strong>EMAIL ENVIADO COM SUCESSO!</strong><button type='button' class='btn-close' data-bs-dismiss='alert'></button>")
+    $("form-control").attr("value", " ")
+}
