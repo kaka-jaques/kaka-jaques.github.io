@@ -27,6 +27,6 @@ main{
 .nav-option img{
     width: 40px;
 }
-@media (max-width<1850 ){
+@media screen and(max-width<1850 ){
     
 }
