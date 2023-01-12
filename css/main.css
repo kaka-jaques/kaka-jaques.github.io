@@ -13,3 +13,12 @@ header img:hover{
     border-radius: 100px;
     transition: all 0.2s ease-in-out;
 }
+main{
+    padding-top: 110px;
+}
+main section{
+    height: 200px;
+}
+footer .row{
+    height: 100px;
+}
