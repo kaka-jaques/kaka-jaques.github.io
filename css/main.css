@@ -19,6 +19,16 @@ main{
 main section{
     height: 200px;
 }
+#rollup{
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    position: fixed;
+    right: 20px;
+}
+#rollup i{
+    
+}
 footer .row{
     height: 100px;
 }
