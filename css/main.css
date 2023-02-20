@@ -3,10 +3,12 @@
 header{
     position: fixed;
     width: 100%;
+    z-index: 60;
 }
 header img{
     width: 100%;
     border-radius: 80px;
+    border: 5px solid rgb(61, 61, 61);
     margin-left: 20px;
     transition: all 0.2s ease-in-out;
 }
@@ -20,6 +22,15 @@ main{
 }
 main section{
     height: 200px;
+}
+#home{
+  margin-top: 100px;
+}
+#xp{
+  margin-top: 450px;
+}
+#xp h4{
+  color: #fff;
 }
 #rollup-link{
     text-decoration: none;
@@ -36,9 +47,6 @@ main section{
 #arrow{
     padding-left: 39%;
     padding-top: 32%;
-}
-footer{
-    
 }
 footer .row{
     height: 100px;
@@ -246,3 +254,37 @@ footer .row{
       --card-height: 400px;
     }
   }
+  
+  /* LANDSCAPE FULLHD */
+  @media screen and (max-width: 1900px) {
+    header img{
+      width: 130%;
+    }
+    header img:hover{
+      width: 160%;
+    }
+  }
+
+  /* LANDSCAPE HD */
+  @media screen and (max-width: 1500px) {
+    header img {
+      width: 160%;
+      border-radius: 200px;
+    }
+    header img:hover{
+      width: 190%;
+    }
+  }
+
+  /* MOBILE */
+  @media screen and (max-width: 1100px) {
+    header img{
+      width: 320%;
+      border-radius: 130px;
+    }
+    header img:hover{
+      width: 380%;
+      border-radius: 300px;
+    }
+  }
+
