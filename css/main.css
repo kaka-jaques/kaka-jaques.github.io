@@ -29,8 +29,173 @@ main section{
 #xp{
   margin-top: 450px;
 }
-#xp h4{
+#form{
+  margin-top: 1200px;
+}
+#form .container-fluid{
+  padding: 40px;
+}
+#form .row{
+  justify-content: center;
+}
+#form .card{
+  padding: 10px;
+  background-color: #4e4e4efb;
+}
+#form .card .fake-img{
+  width: 100%;
+  height: 291.76px;
+  align-items: center;
+  background-color: #00000000;
+}
+#form .card .fake-img .progress-bar{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+#form .card .fake-img h4{
+  position: absolute;
+  bottom: 30%;
+  left: 39%;
+  color: white;
+}
+#form .col-3{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+#form .col-3 h3, h6{
+  color: white;
+  text-align: center;
+}
+#form .card img{
+  border-radius: 8px;
+}
+#xp .container{
+  margin-top: 80px;
+  justify-content: center;
+}
+#xp li .col{
+  display: flex;
+  align-items: center;
+  display: none;
+}
+#xp li .col-2{
+  display: flex;
+  align-items: center;
+}
+#xp .card{
+  background-color: #02a1c913;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#xp div .track-vertical{
+  background-color: #fff;
+  width: 90%;
+  height: 5px;
+}
+#xp div .track-horizontal{
+  background-color: #fff;
+  width: 5px;
+  height: 150px;
+}
+#xp div .track-continue{
+  background-color: #fff;
+  height: 250px;
+  width: 5px;
+  margin-left: 48%;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  display: none;
+  animation-name: fadeInTrackContinue;
+  animation-duration: 5s;
+}
+#xp h3, h5, h7{ 
   color: #fff;
+  padding-left: 3%;
+}
+#xp h3{
+  animation-name: fadeInTextH3;
+  animation-duration: 3s;
+}
+#xp h5{
+  animation-name: fadeInTextH5;
+  animation-duration: 3s;
+}
+#xp h7{
+  animation-name: fadeInTextH7;
+  animation-duration: 3s;
+}
+
+@keyframes fadeInXpRightItem {
+  from{
+    margin-left: 80%;
+    opacity: 0%;
+  }
+  to{
+    margin-left: 41%;
+    opacity: 100%;
+  }
+}
+@keyframes fadeInXpLeftItem {
+  from{
+    margin-left: -50px;
+    opacity: 0%;
+  }
+  to{
+    margin-left: 0px;
+    opacity: 100%;
+  }
+}
+@keyframes fadeInTextH3 {
+  from{
+    font-size: 5px;
+    opacity: 0%;
+  }
+  to{
+    font-size: 28px;
+    opacity: 100%;
+  }
+}
+@keyframes fadeInTextH5 {
+  from{
+    font-size: 5px;
+    opacity: 0%;
+  }
+  to{
+    font-size: 20px;
+    opacity: 100%;
+  }
+}
+@keyframes fadeInTextH7 {
+  from{
+    font-size: 0px;
+    opacity: 0%;
+  }
+  to{
+    font-size: 16px;
+    opacity: 100%;
+  }
+}
+@keyframes fadeInTrackContinue {
+  0%{
+    height: 0px;
+  }
+  100%{
+    height: 250px;
+  }
+}
+
+.rounded-img{
+  width: 180px;
+  border-radius: 120px;
+  border: 5px solid #3685b9;
+  animation-name: fadeInXpRightItem;
+  animation-duration: 3s;
+}
+#xp .row .right-img {
+  animation-name: fadeInXpLeftItem !important;
+  animation-duration: 3s !important;
 }
 #rollup-link{
     text-decoration: none;
@@ -41,15 +206,12 @@ main section{
     height: 55px;
     border-radius: 15px;
     position: fixed;
-    right: 20px;
-    margin-bottom: 20px;
+    left: 95%;
+    bottom: 5%;
 }
 #arrow{
     padding-left: 39%;
     padding-top: 32%;
-}
-footer .row{
-    height: 100px;
 }
 
 :root {
@@ -285,6 +447,42 @@ footer .row{
     header img:hover{
       width: 380%;
       border-radius: 300px;
+    }
+    #form .col-3{
+      margin: 150px;
+      width: 700px;
+    }
+    #form .col-3 h3{
+      font-size: 55px;
+    }
+    #form .col-3 h6{
+      font-size: 30px;
+    }
+    #form .col-3 h4{
+      font-size: 35px;
+    }
+    #form .col-3 .progress{
+      height: 484px;
+    }
+    #xp .card .col .rounded-img{
+      margin-left: 5.8% !important;
+    }
+    #xp .card .middle-xp{
+      margin-left: 49.5px !important;
+    }
+    #xp .card .track-continue{
+      margin-top: -20px;
+      margin-bottom: -20px;
+    }
+    #xp .card .col .right-img{
+      margin-left: 0% !important;
+      margin-right: 69px;
+    }
+    #xp .card h3{
+      font-size: 35px;
+    }
+    #xp .card h5{
+      font-size: 20px;
     }
   }
 

@@ -1,7 +1,47 @@
-console.clear();
+var hoje = Date.now() - Date.UTC(2022,12)
+var conclusaoCursoUninter = (hoje*100)/(Date.UTC(2025,6) - Date.UTC(2022,12))
+
+var scrollXpItem1 = $("#xp-item1").offset().top + $(window).height();
+var scrollXpItem2 = $('#xp-item2').offset().top +  $(window).height() + 200;
+var scrollXpItem3 = $('#xp-item3').offset().top + $(window).height() + 400;
+var scrollXpTrack1 = $('#xp-track1').offset().top + $(window).height() + 100;
+var scrollXpTrack2 = $('#xp-track2').offset().top + $(window).height() + 300;
+
+console.log(scrollXpItem1);
+console.log(scrollXpItem2);
+console.log(scrollXpItem3);
+
+$(window).scroll(function(){
+  console.log($(window).scrollTop());
+  if($(window).scrollTop() > (scrollXpItem1 - 200)){
+    document.querySelector('#xp-item1').setAttribute('style','display: flex;')
+  }
+  if($(window).scrollTop() > (scrollXpTrack1 - 200)){
+    document.querySelector('#xp-track1').setAttribute('style','display: flex;')
+  }
+  if($(window).scrollTop() > (scrollXpItem2 - 200)){
+    document.querySelector('#xp-item2').setAttribute('style','display: flex; margin-left: 30px')
+  }
+  if($(window).scrollTop() > (scrollXpTrack2 - 200)){
+    document.querySelector('#xp-track2').setAttribute('style','display: flex;')
+  }
+  if($(window).scrollTop() > (scrollXpItem3 - 200)){
+    document.querySelector('#xp-item3').setAttribute('style','display: flex;')
+  }
+})
+
+document.querySelector(".progress-bar").setAttribute("style","width:"+conclusaoCursoUninter+"%; height: 20px")
             
             const { gsap, imagesLoaded } = window;
             
+            if(conclusaoCursoUninter >= 100){
+              conclusaoCursoUninter = 100
+              gsap.set(document.querySelector(".progress-bar"),{
+                "border-top-right-radius":"5px",
+                "border-bottom-right-radius":"5px"
+              })
+            }
+
             const buttons = {
               prev: document.querySelector(".btn--left"),
               next: document.querySelector(".btn--right") };
