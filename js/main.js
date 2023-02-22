@@ -1,39 +1,62 @@
+//PROGRESS BAR DO CURSO UNINTER
 var hoje = Date.now() - Date.UTC(2022,12)
 var conclusaoCursoUninter = (hoje*100)/(Date.UTC(2025,6) - Date.UTC(2022,12))
 
+document.querySelector(".progress-bar").setAttribute("style","width:"+conclusaoCursoUninter+"%; height: 20px")
+
+//SINCRONIZAÇÃO DAS ANIMAÇÕES DE XP
 var scrollXpItem1 = $("#xp-item1").offset().top + $(window).height();
 var scrollXpItem2 = $('#xp-item2').offset().top +  $(window).height() + 200;
 var scrollXpItem3 = $('#xp-item3').offset().top + $(window).height() + 400;
 var scrollXpTrack1 = $('#xp-track1').offset().top + $(window).height() + 100;
 var scrollXpTrack2 = $('#xp-track2').offset().top + $(window).height() + 300;
 
-console.log(scrollXpItem1);
-console.log(scrollXpItem2);
-console.log(scrollXpItem3);
-
 $(window).scroll(function(){
-  console.log($(window).scrollTop());
   if($(window).scrollTop() > (scrollXpItem1 - 200)){
     document.querySelector('#xp-item1').setAttribute('style','display: flex;')
+    setTimeout(() => {
+      document.querySelector('#xp-track1').setAttribute('style','display: flex;')
+      setTimeout(() => {
+        if($(window).scrollTop() > (scrollXpItem2 - 300) && $('#xp-track1').height() == 250){
+          document.querySelector('#xp-item2').setAttribute('style','display: flex; margin-left: 30px')
+          setTimeout(() => {
+            document.querySelector('#xp-track2').setAttribute('style','display: flex;')
+            setTimeout(() => {
+              if($(window).scrollTop() > (scrollXpItem3 - 400) && $('#xp-track2').height() == 250){
+                document.querySelector('#xp-item3').setAttribute('style','display: flex;')
+              }
+            }, 1900);
+          }, 1900);
+        }
+      }, 1900);
+    }, 1900);
   }
-  if($(window).scrollTop() > (scrollXpTrack1 - 200)){
-    document.querySelector('#xp-track1').setAttribute('style','display: flex;')
-  }
-  if($(window).scrollTop() > (scrollXpItem2 - 200)){
+  if($(window).scrollTop() > (scrollXpItem2 - 300) && $('#xp-track1').height() == 250){
     document.querySelector('#xp-item2').setAttribute('style','display: flex; margin-left: 30px')
+    setTimeout(() => {
+      document.querySelector('#xp-track2').setAttribute('style','display: flex;')
+      setTimeout(() => {
+        if($(window).scrollTop() > (scrollXpItem3 - 400) && $('#xp-track2').height() == 250){
+          document.querySelector('#xp-item3').setAttribute('style','display: flex;')
+        }
+      }, 1900);
+    }, 1900);
   }
-  if($(window).scrollTop() > (scrollXpTrack2 - 200)){
-    document.querySelector('#xp-track2').setAttribute('style','display: flex;')
-  }
-  if($(window).scrollTop() > (scrollXpItem3 - 200)){
+  if($(window).scrollTop() > (scrollXpItem3 - 400) && $('#xp-track2').height() == 250){
     document.querySelector('#xp-item3').setAttribute('style','display: flex;')
   }
 })
 
-document.querySelector(".progress-bar").setAttribute("style","width:"+conclusaoCursoUninter+"%; height: 20px")
+function nextCardTimer() {
+  setTimeout(() => {
+    swapCards("right")
+    initTimer();
+  }, 8500);
+}
             
             const { gsap, imagesLoaded } = window;
             
+            //ADICIONANDO ATRIBUTOS CSS COM GSAP
             if(conclusaoCursoUninter >= 100){
               conclusaoCursoUninter = 100
               gsap.set(document.querySelector(".progress-bar"),{
@@ -44,7 +67,8 @@ document.querySelector(".progress-bar").setAttribute("style","width:"+conclusaoC
 
             const buttons = {
               prev: document.querySelector(".btn--left"),
-              next: document.querySelector(".btn--right") };
+              next: document.querySelector(".btn--right") 
+            };
             
             const cardsContainerEl = document.querySelector(".cards__wrapper");
             
@@ -273,6 +297,13 @@ document.querySelector(".progress-bar").setAttribute("style","width:"+conclusaoC
             
             waitForImages();
 
+            //ABRIR LINK DOS PROJETOS CLICANDO NOS CARDS
             function openTab(link){
                 window.open(link, '_blank')
             }
+
+            function initTimer() {
+              nextCardTimer();
+            }
+
+            initTimer();
