@@ -334,50 +334,20 @@ button:focus {
   height: 50px;
   right: 502px;
   top: 525px;
-  border: 2px solid white;
-  border-left: none;
   border-radius: 50px;
-  animation-name: loadingNextCard;
-  animation-duration: 8.5s;
-  animation-iteration-count: infinite;
+  
 }
+.cardList #border-btn1{
+  border-top: 2px dashed white;
+}
+.cardList #border-btn2{
+  
+}
+.cardList #border-btn3{
 
-@keyframes loadingNextCard {
-  0% {
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
-    border-right: none;
-    opacity: 0%;
-  }
-  22%{
-    border-top: 2px solid white;
-    transition: all 0.2 ease-in-out;
-  }
-  25%{
-    border-top: 2px solid white;
-    transition: all 0.2 ease-in-out;
-  }
-  47%{
-    border-right: 2px solid white;
-    transition: all 0.2s ease-in-out;
-  }
-  50%{
-    border-right: 2px solid white;
-    transition: all 0.2s white;
-  }
-  72%{
-    border-bottom: 2px solid white;
-    transition: all 0.2s ease-in-out;
-  }
-  75%{
-    border-bottom: 2px solid white;
-    transition: all 0.2s white;
-  }
-  100% {
-    border-left: 2px solid white;
-    transition: all 0.2s ease-in-out;
-  }
+}
+.cardList #border-btn4{
+
 }
 
 #cardlist {
