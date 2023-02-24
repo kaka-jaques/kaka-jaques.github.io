@@ -2,7 +2,8 @@
 var hoje = Date.now() - Date.UTC(2022,12)
 var conclusaoCursoUninter = (hoje*100)/(Date.UTC(2025,6) - Date.UTC(2022,12))
 
-document.querySelector(".progress-bar").setAttribute("style","width:"+conclusaoCursoUninter+"%; height: 20px")
+document.querySelector("#progress-bar-uninter").setAttribute("style","width:"+conclusaoCursoUninter+"%; height: 20px")
+document.querySelector('#progress-bar-uninter').append(Math.trunc(conclusaoCursoUninter)+'%')
 
 //SINCRONIZAÇÃO DAS ANIMAÇÕES DE XP
 var scrollXpItem1 = $("#xp-item1").offset().top + $(window).height();
