@@ -48,11 +48,29 @@ $(window).scroll(function(){
   }
 })
 
+// TIMER PARA PRÓXIMO CARD
 function nextCardTimer() {
-  setTimeout(() => {
+  var timerTimeout = setTimeout(() => {
+    var timerBtnAnim = new Vivus('timer-btn', {
+      type: 'sync', 
+      duration: 4600, 
+      start: 'autostart'
+    });
+    timerBtnAnim.stop().reset().play(1);
     swapCards("right")
     initTimer();
   }, 8500);
+}
+
+function nextCard(direction){
+  var timerBtnAnim = new Vivus('timer-btn', {
+    type: 'sync', 
+    duration: 4600, 
+    start: 'autostart'
+  });
+  timerBtnAnim.stop().reset().play(1);
+  swapCards(direction)
+  initTimer();
 }
             
             const { gsap, imagesLoaded } = window;
@@ -75,9 +93,9 @@ function nextCardTimer() {
             
             const cardInfosContainerEl = document.querySelector(".info__wrapper");
             
-            buttons.next.addEventListener("click", () => swapCards("right"));
+            buttons.next.addEventListener("click", () => nextCard("right"));
             
-            buttons.prev.addEventListener("click", () => swapCards("left"));
+            buttons.prev.addEventListener("click", () => nextCard("left"));
             
             function swapCards(direction) {
               const currentCardEl = cardsContainerEl.querySelector(".current--card");

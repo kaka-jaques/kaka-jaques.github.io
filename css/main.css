@@ -292,6 +292,30 @@ h7 {
   padding-top: 32%;
 }
 
+#timer-btn{
+  position: absolute;
+  stroke: #fffefe;
+  height: 50px;
+  right: -74px;
+  top: -14px;
+  transform: rotate(90deg);
+  opacity: 100%;
+  animation-name: appearing;
+  animation-duration: 6000ms;
+}
+
+@keyframes appearing {
+  from{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 0%;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
 :root {
   --card-width: 200px;
   --card-height: 300px;
