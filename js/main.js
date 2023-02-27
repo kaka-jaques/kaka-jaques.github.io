@@ -1,3 +1,8 @@
+//INTERNACIONALIZAÇÃO
+if(navigator.language === 'en-US' && !window.location.href.includes('us')){
+  window.location.href += '/us'
+}
+
 //PROGRESS BAR DO CURSO UNINTER
 var hoje = Date.now() - Date.UTC(2022,12)
 var conclusaoCursoUninter = (hoje*100)/(Date.UTC(2025,6) - Date.UTC(2022,12))
@@ -62,15 +67,15 @@ function nextCardTimer() {
   }, 8500);
 }
 
+
 function nextCard(direction){
-  var timerBtnAnim = new Vivus('timer-btn', {
-    type: 'sync', 
-    duration: 4600, 
-    start: 'autostart'
-  });
-  timerBtnAnim.stop().reset().play(1);
+  // var timerBtnAnim = new Vivus('timer-btn', {
+  //   type: 'sync', 
+  //   duration: 4600, 
+  //   start: 'autostart'
+  // });
+  // timerBtnAnim.stop().reset().play(1);
   swapCards(direction)
-  initTimer();
 }
             
             const { gsap, imagesLoaded } = window;
