@@ -53,15 +53,24 @@ $(window).scroll(function(){
   }
 })
 
+var bar = new ProgressBar.Circle(container, {
+  strokeWidth: 5,
+  easing: 'easeInOut',
+  duration: 8400,
+  color: '#eee',
+  trailColor: '#212529',
+  trailWidth: 5,
+  svgStyle: null
+});
+
+var timerTimeout = 0
+
 // TIMER PARA PRÓXIMO CARD
 function nextCardTimer() {
-  var timerTimeout = setTimeout(() => {
-    var timerBtnAnim = new Vivus('timer-btn', {
-      type: 'sync', 
-      duration: 4600, 
-      start: 'autostart'
-    });
-    timerBtnAnim.stop().reset().play(1);
+  setTimeout(() => {
+    bar.animate(1);
+  }, 1000);
+  timerTimeout = setTimeout(() => {
     swapCards("right")
     initTimer();
   }, 8500);
@@ -69,12 +78,16 @@ function nextCardTimer() {
 
 
 function nextCard(direction){
-  // var timerBtnAnim = new Vivus('timer-btn', {
-  //   type: 'sync', 
-  //   duration: 4600, 
-  //   start: 'autostart'
-  // });
-  // timerBtnAnim.stop().reset().play(1);
+  bar.animate(0,{
+    duration: 300
+  });
+  setTimeout(() => {
+    clearInterval(timerTimeout);
+    initTimer();
+    bar.set(0)
+    bar.animate(1); 
+  }, 300);
+  
   swapCards(direction)
 }
             
@@ -326,8 +339,14 @@ function nextCard(direction){
                 window.open(link, '_blank')
             }
 
+            //INICIALIZANDO TIMER DOS CARDS
             function initTimer() {
+              bar.set(1)
+              bar.animate(0,{
+                duration: 1000
+              });
               nextCardTimer();
             }
 
+            //STARTUP INIT
             initTimer();
