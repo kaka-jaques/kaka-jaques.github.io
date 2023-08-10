@@ -18,6 +18,9 @@ html ::-webkit-scrollbar-thumb{
   top: 36%;
   left: 43.5%;
   animation: pulsante 1.5s infinite;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .loader-background{
@@ -31,39 +34,18 @@ html ::-webkit-scrollbar-thumb{
 .loader .img{
   border-radius: 200px;
   width: 200px;
+  animation: loaderEntry 1s;
+  align-content: center;
 }
 
-.loader-finished{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #0b8dc0;
-  position: fixed;
-  top: 36%;
-  left: 43.5%;
-  animation: pulsante 1.5s infinite;
-}
-
-.loader-background-finished{
-  width: 102%;
-  height: 100%;
-  position: fixed;
-  left: -5px;
-  z-index: 70;
-  animation: fadeOut 1s normal;
-}
-
-.loader-finished .img{
-  border-radius: 200px;
-  width: 200px;
-}
-
-@keyframes fadeOut{
+@keyframes loaderEntry {
   0%{
-    background-color: #212529;
+    rotate: 45deg;
+    width: 50px;
   }
   100%{
-    background-color: #21252900;
+    rotate: 0deg;
+    width: 200px;
   }
 }
 

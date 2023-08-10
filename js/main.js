@@ -356,6 +356,11 @@ function nextCard(direction){
             //ATIVAR SCROLL NOVAMENTE
             function enableOverflow(){
               document.body.style.overflow = 'auto';
-              document.querySelector('#loader-background').setAttribute('class', 'loader-background-finished bg-dark');
-              document.querySelector('#loader').setAttribute('class', 'loader-finished');
+              gsap.to(".loader-background",{
+                duration: 1,
+                opacity: 0,
+                onComplete: () => {
+                  document.querySelector(".loader-background").remove();
+                }
+              })
             }
