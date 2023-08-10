@@ -1,5 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
 
+html ::-webkit-scrollbar{
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb{
+  border-radius: 50px;
+  background: #0b8dc0;
+}
+
+.loader{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #0b8dc0;
+  position: fixed;
+  top: 36%;
+  left: 43.5%;
+  animation: pulsante 1.5s infinite;
+}
+
+.loader-background{
+  width: 102%;
+  height: 100%;
+  position: fixed;
+  left: -5px;
+  z-index: 70;
+}
+
+.loader .img{
+  border-radius: 200px;
+  width: 200px;
+}
+
+.loader-finished{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #0b8dc0;
+  position: fixed;
+  top: 36%;
+  left: 43.5%;
+  animation: pulsante 1.5s infinite;
+}
+
+.loader-background-finished{
+  width: 102%;
+  height: 100%;
+  position: fixed;
+  left: -5px;
+  z-index: 70;
+  animation: fadeOut 1s normal;
+}
+
+.loader-finished .img{
+  border-radius: 200px;
+  width: 200px;
+}
+
+@keyframes fadeOut{
+  0%{
+    background-color: #212529;
+  }
+  100%{
+    background-color: #21252900;
+  }
+}
+
+@keyframes pulsante{
+  0%{
+    box-shadow: #0b8dc0 0 0 0 0;
+  }
+  100%{
+    box-shadow: #0b8dc000 0 0 0 42px;
+  }
+}
+
 header {
   position: fixed;
   width: 100%;

@@ -3,6 +3,9 @@ if(navigator.language === 'en-US' && !window.location.href.includes('us')){
   window.location.href += '/us'
 }
 
+//INICIANDO O SITE COM SCROLL TRAVADO
+document.body.style.overflow = 'hidden';
+
 //PROGRESS BAR DO CURSO UNINTER
 var hoje = Date.now() - Date.UTC(2022,12)
 var conclusaoCursoUninter = (hoje*100)/(Date.UTC(2025,6) - Date.UTC(2022,12))
@@ -257,7 +260,7 @@ function nextCard(direction){
             }
             
             function init() {
-            
+              enableOverflow();
               let tl = gsap.timeline();
             
               tl.to(cardsContainerEl.children, {
@@ -324,7 +327,6 @@ function nextCard(direction){
                         duration: 0.8,
                         opacity: 0,
                         pointerEvents: "none" }).
-            
                       call(() => init());
                     }
                   }
@@ -350,3 +352,10 @@ function nextCard(direction){
 
             //STARTUP INIT
             initTimer();
+
+            //ATIVAR SCROLL NOVAMENTE
+            function enableOverflow(){
+              document.body.style.overflow = 'auto';
+              document.querySelector('#loader-background').setAttribute('class', 'loader-background-finished bg-dark');
+              document.querySelector('#loader').setAttribute('class', 'loader-finished');
+            }
