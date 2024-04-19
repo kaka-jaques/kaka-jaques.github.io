@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<link rel="shortcut icon" href="\img\icon.png">
-<html lang="pt-br">
+<link rel='shortcut icon' href='./assets/imgs/icon.jpg'>
+<html lang='pt-br'>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Kalil's Website</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width' media='viewport'>
+    <title>Kalil's Portfolio</title>
     <!-- Bootstrap 5.2 CSS only -->
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'
         integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/HatchfulExport-All/favicon.ico" />
+    <link rel='icon' type='image/x-icon' href='img/icon.png' />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js" crossorigin="anonymous"></script>
+    <script src='https://use.fontawesome.com/releases/v6.2.0/js/all.js' crossorigin='anonymous'></script>
     <!-- Latest compiled and minified CSS - Bootstrap Select CSS -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel='stylesheet'
+        href='https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css'>
+    <!-- Swiper Slide-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- My Own CSS3 -->
-    <link rel="stylesheet" type="text/css" href="\css\main.css">
+    <link rel='stylesheet' type='text/css' href='./css/main.css'>
 </head>
 
-<body class="container-fluid bg-dark">
-
-    <!-- START -->
+<body>
 
     <div class="loader-background bg-dark" id="loader-background">
         <div class="loader" id="loader">
@@ -29,304 +31,31 @@
         </div>
     </div>
 
+    <!--  LIB E SCRIPTS -->
 
-    <header>
-        <div class="row" id="menu">
-            <div class="nav card" style="background-color: #3685b9; margin-top: -10px;">
-                <div class="card-body" style="height: 100px; background-color: #3685b9;">
-                    <div class="row">
-                        <div class="nav-option col-1"><a href="https://www.linkedin.com/in/kalil-j-fakhouri-1744b321a/"
-                                target="_blank"><img src="/img/profile.jpeg" alt="Eu"></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section id="home">
-            <h1 class="bg-light">Home</h1>
-        </section>
-
-        <section id="projects">
-
-            <h1 class="bg-light">Meus Projetos</h1>
-            <br>
-            <div class="app">
-
-                <div class="cardList">
-                    <button class="cardList__btn btn btn--left">
-                        <div class="icon">
-                            <svg>
-                                <use xlink:href="#arrow-left"></use>
-                            </svg>
-                        </div>
-                    </button>
-
-                    <div class="cards__wrapper">
-                        <div class="card current--card" id="cardlist"
-                            onclick="openTab('https://github.com/kaka-jaques/Project_TMS_Fullstack_Entra21')">
-                            <div class="card__image">
-                                <img src=".\img\TMS_GIF.gif" alt="" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="card next--card" id="cardlist"
-                            onclick="openTab('https://github.com/kaka-jaques/TMS-Project-Backend-Entra21')">
-                            <div class="card__image">
-                                <img src=".\img\codando.gif" alt="" />
-                            </div>
-                        </div>
-
-                        <div class="card previous--card" id="cardlist"
-                            onclick="openTab('https://github.com/kaka-jaques/kaka-jaques.github.io')">
-                            <div class="card__image">
-                                <img src=".\img\developing.gif" alt="" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="cardList__btn btn btn--right">
-                        <div class="icon">
-                            <svg>
-                                <use xlink:href="#arrow-right"></use>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="check" id="container"></div>
-                </div>
-
-                <div class="infoList">
-                    <div class="info__wrapper">
-
-                        <div class="info current--info">
-                            <h1 class="text name">TMS</h1>
-                            <h4 class="text location">Fullstack</h4>
-                            <p class="text description">Um projeto focado na gestão de fretes.</p>
-                            <p class="text description"><b>Stacks:</b> Java - Angular - MySQL - Node - GCP</p>
-
-                        </div>
-
-
-                        <div class="info next--info">
-                            <h1 class="text name">TMS</h1>
-                            <h4 class="text location">Backend</h4>
-                            <p class="text description">Versão inicial do projeto TMS.</p>
-                            <p class="text description"><b>Stacks:</b> Java</p>
-                        </div>
-
-                        <div class="info previous--info">
-                            <h1 class="text name">Portfolio</h1>
-                            <h1 class="text name">Webpage</h1>
-                            <h4 class="text location">Frontend</h4>
-                            <p class="text description">Site pessoal.</p>
-                            <p class="text description"><b>Stacks:</b> HTML - CSS - JS</p>
-                        </div>
-                    </div>
-                </div>
-                <svg class="icons" style="display: none;">
-                    <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                        <polyline points='328 112 184 256 328 400'
-                            style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-                    </symbol>
-                    <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                        <polyline points='184 112 328 256 184 400'
-                            style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-                    </symbol>
-                </svg>
-
-
-                <script
-                    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-
-                <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
-            </div>
-
-
-        </section>
-
-        <section id="xp">
-            <h1 class="bg-light">Experiência</h1>
-            <div class="container">
-                <div class="card">
-                    <ul>
-                        <li class="row">
-                            <div class="col" id="xp-item1">
-                                <img src=".\img\clickway.png" alt="" class="rounded-img"
-                                    style="height: 120%; margin-left: 41%;">
-                                <div class="col-2">
-                                    <div class="track-vertical"></div>
-                                    <div class="track-horizontal"></div>
-                                </div>
-                                <div>
-                                    <h3>Clickway Informática</h3>
-                                    <h5>Estoquista</h5>
-                                    <h7>06/2021 - 08/2021</h7>
-                                </div>
-                            </div>
-                        </li>
-                        <div class="track-continue" id="xp-track1"></div>
-                        <li class="row">
-                            <div class="col middle-xp" id="xp-item2" style="margin-left: 30px;">
-                                <div style="text-align: right; margin-right: 20px;">
-                                    <h3>Showtec Informática</h3>
-                                    <h5>Técnico em TI</h5>
-                                    <h7>09/2021 - 02/2023</h7>
-                                </div>
-                                <div class="col-2">
-                                    <div class="track-horizontal"></div>
-                                    <div class="track-vertical" style="width: 100%;"></div>
-                                </div>
-                                <img src="https://showtec.inf.br/galeria/foto/0dab0aedfe244ea6a61d1594ebf0fdfa.jpg"
-                                    alt="" class="rounded-img right-img" style="height: 96%;">
-                            </div>
-                        </li>
-                        <div class="track-continue" id="xp-track2"></div>
-                        <li class="row">
-                            <div class="col" id="xp-item3">
-                                <img src=".\img\neomind.png" alt="" class="rounded-img" style=" margin-left: 41%;">
-                                <div class="col-2">
-                                    <div class="track-vertical"></div>
-                                    <div class="track-horizontal"></div>
-                                </div>
-                                <div>
-                                    <h3>Neomind Solutions</h3>
-                                    <h5>Dev. Trainee</h5>
-                                    <h7>02/2023 - atualmente</h7>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id='form'>
-            <h1 class="bg-light">Formação</h1>
-
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="./img/diploma_ifap.jpg" alt="">
-                            <i id="plus" class="fa-sharp fas fa-plus"></i>
-                        </div>
-                        <h3>IFAP - Redes de Computadores</h3>
-                        <h6>2017 - 2019</h6>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src=".\img\entra21-certificado.png" alt="">
-                            <i id="plus" class="fa-sharp fas fa-plus"></i>
-                        </div>
-                        <h3>Entra21 - Curso de Programação Extensivo Fullstack</h3>
-                        <h6>04/2022 - 10/2022</h6>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="./img/certificado_obi.jpg" alt="">
-                            <i id="plus" class="fa-sharp fas fa-plus"></i>
-                        </div>
-                        <h3>OBI - XX Olímpiada Brasileira de Informática</h3>
-                        <h6>08/2018</h6>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="./img/certificado_beyondhack.jpg" alt="">
-                            <i id="plus" class="fa-sharp fas fa-plus"></i>
-                        </div>
-                        <h3>Sebrae - Beyond Hack</h3>
-                        <h6>11/2019</h6>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="./img/certificado_mysql.png" alt="">
-                            <i id="plus" class="fa-sharp fas fa-plus"></i>
-                        </div>
-                        <h3>Alfahelix - Introdução a Banco de Dados MySQL</h3>
-                        <h6>11/2022</h6>
-                    </div>
-
-                    <div class="col-3">
-                        <div class="card">
-                            <div class="fake-img progress">
-                                <div id="progress-bar-uninter"
-                                    class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                                    aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                                <h4>In Progress...</h4>
-                            </div>
-                            <i id="plus" class="fa-sharp fas fa-plus"></i>
-                        </div>
-                        <h3>UNINTER - Análise e Desenvolvimento de Sistemas</h3>
-                        <h6>12/2022 - 06/2025 (previsto)</h6>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <div class="fake-img progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                    role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
-                                    aria-valuemin="0" aria-valuemax="100" style="width: 19%; height: 20px;">19%</div>
-                                <h4>Paused...</h4>
-                            </div>
-                            <i id="plus" class="fa-sharp fas fa-plus"></i>
-                        </div>
-                        <h3>Heber Simeoni - Dominando o After Effects</h3>
-                        <h6>03/2021 - </h6>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <div class="fake-img progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                    role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
-                                    aria-valuemin="0" aria-valuemax="100" style="width: 30%; height: 20px;">30%</div>
-                                <h4>Paused...</h4>
-                            </div>
-                            <i id="plus" class="fa-sharp fas fa-plus"></i>
-                        </div>
-                        <h3>Denilson Bonatti - Microsoft Windows Server 2019</h3>
-                        <h6>05/2022 - </h6>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <a href="#home" id="rollup-link">
-            <div class="bg-primary" id="rollup">
-                <i class="fa-solid fa-arrow-up" id="arrow"></i>
-            </div>
-        </a>
-
-    </main>
-
-    <!-- END -->
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-
+    <!-- JQuery 3.2.1 -->
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'
+        integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
+        crossorigin='anonymous'></script>
     <!-- Bootstrap 5.2 -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'
         integrity='sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2'
         crossorigin='anonymous'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' type='text/javascript'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <!-- Vivus 0.4.6 JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
-        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- ProgressBar/Circle -->
-    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa'
+        crossorigin='anonymous'></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- My Own JS -->
+    <script type='text/javascript' src='./js/main.js'></script>
 </body>
 
 </html>
