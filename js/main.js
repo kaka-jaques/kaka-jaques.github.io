@@ -10,48 +10,38 @@ document.body.style.overflow = 'auto';
 var hoje = Date.now() - Date.UTC(2022, 12)
 var conclusaoCursoUninter = (hoje * 100) / (Date.UTC(2025, 6) - Date.UTC(2022, 12))
 
-document.querySelector("#progress-bar-uninter").setAttribute("style", "width:" + conclusaoCursoUninter + "%; height: 20px")
-document.querySelector('#progress-bar-uninter').append(Math.trunc(conclusaoCursoUninter) + '%')
-
-const swiper = new Swiper(".projectSwiper", {
-  effect: converflow,
-  grabcursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect:{
-    rotate: 50,
-    strecth: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true
-  },
-  navigation:{
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  }
+var swiper1 = new Swiper(".projectSwiper", {
+  effect: "coverflow",
+      grabCursor: true,
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: "3",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 4000
+      },
+      speed: 900,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
 })
 
-var bar = new ProgressBar.Circle(container, {
-  strokeWidth: 5,
-  easing: 'easeInOut',
-  duration: 8400,
-  color: '#eee',
-  trailColor: '#212529',
-  trailWidth: 5,
-  svgStyle: null
-});
-
-
-const { gsap, imagesLoaded } = window;
-
-//ADICIONANDO ATRIBUTOS CSS COM GSAP
-if (conclusaoCursoUninter >= 100) {
-  conclusaoCursoUninter = 100
-  gsap.set(document.querySelector(".progress-bar"), {
-    "border-top-right-radius": "5px",
-    "border-bottom-right-radius": "5px"
-  })
-}
+// var bar = new ProgressBar.Circle(container, {
+//   strokeWidth: 5,
+//   easing: 'easeInOut',
+//   duration: 8400,
+//   color: '#eee',
+//   trailColor: '#212529',
+//   trailWidth: 5,
+//   svgStyle: null
+// });
 
 //ATIVAR SCROLL NOVAMENTE
 function enableOverflow() {
