@@ -33,6 +33,46 @@ var swiper1 = new Swiper(".projectSwiper", {
     }
 })
 
+var projectTitle = 
+[
+  {
+    title: "Project X",
+    description: "Descrição do Projeto X"
+  },
+  {
+    title: "Project Y",
+    description: "Descrição do Projeto Y"
+  },
+  {
+    title: "Project Z",
+    description: "Descrição do Projeto Z"
+  },
+  {
+    title: "Project A",
+    description: "Descrição do Projeto A"
+  }
+]
+
+document.getElementById("project-title").innerHTML = "<h1 class='title'>" + projectTitle[0].title + "</h1><p class='description'>" + projectTitle[0].description + "</p>"
+
+setInterval(function(){
+  if(swiper1.animating == true){
+    gsap.to(".project-title", {
+      opacity:0,
+      duration: 0.5,
+      y: -100,
+      onComplete: () => {
+        document.getElementById("project-title").innerHTML = "<h1 class='title'>" + projectTitle[swiper1.realIndex].title + "</h1><p class='description'>" + projectTitle[swiper1.realIndex].description + "</p>"
+        gsap.to(".project-title", {
+          opacity:1,
+          duration: 0.5,
+          y: 0
+        })
+      }
+    })
+  }
+}, 500)
+
 // var bar = new ProgressBar.Circle(container, {
 //   strokeWidth: 5,
 //   easing: 'easeInOut',
