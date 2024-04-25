@@ -71,8 +71,24 @@ main {
   padding-top: 110px;
 }
 
+#intro{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 #intro .col img{
   width: 70%;
+  border-radius: 20px;
+  box-shadow: -7px 7px 7px #3685b9;
+}
+
+#intro #intro-text{
+  text-align: justify;
+}
+
+#intro .col h1,p{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .projectSwiper{
@@ -97,8 +113,6 @@ main {
 #projects .project-title{
   z-index: 60;
   position: absolute;
-  left: 42%;
-  top: 820px;
   font-family: "Montserrat", sans-serif;
   color: white;
   text-shadow: 3px 3px black;

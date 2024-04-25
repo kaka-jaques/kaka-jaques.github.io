@@ -103,6 +103,22 @@ setInterval(function(){
   }
 }, 200)
 
+const divSwiper = document.querySelector('.projectSwiper');
+const divTitle = document.querySelector('.project-title');
+
+function atualizaPosicao() {
+  mainPos = divSwiper.getBoundingClientRect();
+
+  divTitle.style.left = (mainPos.left*2.05)+window.scrollX + 'px';
+  divTitle.style.top = mainPos.top+window.scrollY+150 + 'px';
+
+}
+
+window.addEventListener('scroll', atualizaPosicao);
+window.addEventListener('resize', atualizaPosicao);
+
+atualizaPosicao();
+
 // var bar = new ProgressBar.Circle(container, {
 //   strokeWidth: 5,
 //   easing: 'easeInOut',
