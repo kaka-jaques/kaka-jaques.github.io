@@ -76,6 +76,7 @@ header h2{
   left: 11%;
   animation: glowing 2.5s infinite;
   font-weight: 700;
+  color: rgba(0, 0, 0, 0.625);
 }
 
 @keyframes glowing {
@@ -83,7 +84,7 @@ header h2{
     text-shadow: 0 0 15px rgba(255, 255, 255, 1);
   }
   50%{
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.75);
   }
   100%{
     text-shadow: 0 0 15px rgba(255, 255, 255, 1);
