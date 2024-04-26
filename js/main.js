@@ -24,7 +24,7 @@ var swiper1 = new Swiper(".projectSwiper", {
         slideShadows: true,
       },
       autoplay: {
-        delay: 4000
+        delay: 6500
       },
       speed: 900,
     navigation: {

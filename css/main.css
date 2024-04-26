@@ -67,16 +67,16 @@ header {
   background-color: #3685b9;
   z-index: 99;
   align-content: center;
+  align-items: center;
+  display: flex;
 }
 
 header h2{
   font-family: 'Kalam', cursive;
-  position: fixed;
-  top: 5%;
-  left: 11%;
   animation: glowing 2.5s infinite;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.625);
+  margin-left: 15px;
 }
 
 @keyframes glowing {
@@ -97,9 +97,7 @@ header #logo {
   overflow: hidden;
   border-radius: 50px;
   border: 5px solid rgba(210, 200, 200, 0.659);
-  position: fixed;
-  top: 1%;
-  left: 5%;
+  margin-left: 5%;
 }
 
 header #logo img{
