@@ -29,8 +29,7 @@ html ::-webkit-scrollbar-thumb{
   height: 100%;
   position: fixed;
   left: -5px;
-  z-index: 70;
-  display: none;
+  z-index: 100;
 }
 
 .loader .img{
