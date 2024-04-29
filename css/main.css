@@ -70,12 +70,31 @@ header {
   display: flex;
 }
 
+header .nav-menu{
+  margin-left: 30%;
+}
+
+header .nav-menu a{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid black;
+  padding-bottom: 2px;
+  transition: 0.25s ease-in-out;
+}
+
+header .nav-menu a:hover{
+  color: white;
+  border-color: white;
+}
+
 header h2{
   font-family: 'Kalam', cursive;
   animation: glowing 2.5s infinite;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.625);
   margin-left: 15px;
+  cursor: context-menu;
 }
 
 @keyframes glowing {
