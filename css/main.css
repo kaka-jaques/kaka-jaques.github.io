@@ -398,9 +398,6 @@ header #logo img {
   }
 }
 
-
-
-
 main {
   padding-top: 110px;
   background-color: #343a40;
@@ -466,4 +463,40 @@ p {
   text-shadow: 1px 1px black;
   border-radius: 9px;
   padding: 7 px;
+}
+
+footer{
+  background-color: #0f5482;
+  height: 180px;
+  width: 100%;
+  text-align: center;
+}
+
+footer .row{
+  align-items: center;
+}
+
+footer .rights h6{
+  margin-top: 10px !important;
+}
+
+footer a { 
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  display: flex;
+  margin-top: 10px !important;
+  transition: 0.2s ease-in-out;
+}
+
+footer a:hover{
+  color: #999999;
+  text-decoration: none;
+}
+
+footer .svg-inline--fa {
+  color: black;
+  height: 25px;
+  margin-right: 10px;
 }
