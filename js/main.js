@@ -166,3 +166,35 @@ function enableOverflow() {
     }
   })
 }
+
+let c = 0;
+function toggle() {
+  c % 2 == 0 ? day() : night();
+  c++;
+}
+
+function night() {
+  document.querySelector(".cont_circle").className =
+    "cont_circle cont_circle_noche";
+    gsap.to('main',{
+      duration: 1,
+      backgroundColor: '#343a40'
+    })
+    gsap.to('.anim-text',{
+      duration: 1,
+      color: 'white'
+    })
+}
+
+function day() {
+  document.querySelector(".cont_circle").className =
+    "cont_circle cont_circle_dia";
+    gsap.to('main',{
+      duration: 1,
+      backgroundColor: '#e1e0e0'
+    })
+    gsap.to('.anim-text',{
+      duration: 1,
+      color: 'black'
+    })
+}
