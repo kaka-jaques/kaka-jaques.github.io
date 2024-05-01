@@ -18,6 +18,7 @@ window.addEventListener('load', function () {
 
     if (imagensCarregadas) {
       enableOverflow();
+      swiper1.slideNext()
     }
 
   }
@@ -110,12 +111,14 @@ setInterval(function () {
 
   if (swiper1.animating == true && transitioning == false) {
     transitioning = true;
+    bar.animate(0.0, {duration: 300});
     gsap.to(".project-title", {
       opacity: 0,
       duration: 0.5,
       y: -100,
       onComplete: () => {
-        document.getElementById("project-title").innerHTML = "<h1 class='title'>" + projectTitle[swiper1.realIndex].title + "</h1><p class='description'>" + projectTitle[swiper1.realIndex].description + "</p>"
+        document.getElementById("project-title").innerHTML = "<h1 class='title'>" + projectTitle[swiper1.realIndex].title + "</h1><p class='description'>" + projectTitle[swiper1.realIndex].description + "</p>";
+        bar.animate(1);
         gsap.to(".project-title", {
           opacity: 1,
           duration: 0.5,
@@ -131,12 +134,18 @@ setInterval(function () {
 
 const divSwiper = document.querySelector('.projectSwiper');
 const divTitle = document.querySelector('.project-title');
+const divCircle = document.querySelector('#container');
+const divPrev = document.querySelector('.swiper-button-prev');
+const divNext = document.querySelector('.swiper-button-next');
 
 function atualizaPosicao() {
   mainPos = divSwiper.getBoundingClientRect();
 
   divTitle.style.left = (mainPos.left * 2.05) + window.scrollX + 'px';
   divTitle.style.top = mainPos.top + window.scrollY + 150 + 'px';
+  divCircle.style.top = mainPos.top + window.scrollY + 220 + 'px';
+  divPrev.style.top = mainPos.top + window.scrollY + 257 + 'px';
+  divNext.style.top = mainPos.top + window.scrollY + 257 + 'px';
 
 }
 
@@ -145,15 +154,15 @@ window.addEventListener('resize', atualizaPosicao);
 
 atualizaPosicao();
 
-// var bar = new ProgressBar.Circle(container, {
-//   strokeWidth: 5,
-//   easing: 'easeInOut',
-//   duration: 8400,
-//   color: '#eee',
-//   trailColor: '#212529',
-//   trailWidth: 5,
-//   svgStyle: null
-// });
+var bar = new ProgressBar.Circle(container, {
+  strokeWidth: 5,
+  easing: 'easeInOut',
+  duration: 7000,
+  color: '#eee',
+  svgStyle: null
+});
+
+bar.animate(1)
 
 //ATIVAR SCROLL NOVAMENTE
 function enableOverflow() {
@@ -184,6 +193,11 @@ function night() {
       duration: 1,
       color: 'white'
     })
+    gsap.to('.img-me',{
+      duration: 1,
+      boxShadow: '-7px 7px 7px #3685b9'
+    })
+    bar.path.setAttribute('stroke', 'white')
 }
 
 function day() {
@@ -192,9 +206,15 @@ function day() {
     gsap.to('main',{
       duration: 1,
       backgroundColor: '#e1e0e0'
+    });
+    gsap.to('.img-me',{
+      duration: 1,
+      boxShadow: '-10px 10px 7px #343a40'
     })
     gsap.to('.anim-text',{
       duration: 1,
       color: 'black'
-    })
+    });
+
+    bar.path.setAttribute('stroke', 'black')
 }

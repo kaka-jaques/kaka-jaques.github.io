@@ -73,7 +73,7 @@ header {
 }
 
 header .nav-menu {
-  margin-left: 30%;
+  margin-left: 20%;
 }
 
 header .nav-menu a {
@@ -437,6 +437,14 @@ p {
   height: 415px;
 }
 
+#projects .swiper-button-next{
+  right: 15%;
+}
+
+#projects .swiper-button-prev{
+  left: 15%;
+}
+
 .projectSwiper .swiper-slide img {
   display: block;
   width: 100%;
@@ -465,6 +473,13 @@ p {
   padding: 7 px;
 }
 
+#projects #container{
+  position: absolute;
+  right: 13.6%;
+  width: 75px;
+  height: 75px;
+}
+
 footer{
   background-color: #0f5482;
   height: 180px;
@@ -477,7 +492,7 @@ footer .row{
 }
 
 footer .rights h6{
-  margin-top: 10px !important;
+  margin-top: 15px !important;
 }
 
 footer a { 
@@ -486,7 +501,7 @@ footer a {
   font-family: 'Montserrat', sans-serif;
   align-items: center;
   display: flex;
-  margin-top: 10px !important;
+  margin-top: 5px !important;
   transition: 0.2s ease-in-out;
 }
 
@@ -495,8 +510,14 @@ footer a:hover{
   text-decoration: none;
 }
 
-footer .svg-inline--fa {
+footer .social .svg-inline--fa {
   color: black;
   height: 25px;
   margin-right: 10px;
+}
+
+footer .third-col .svg-inline--fa{
+  color: black;
+  height: 10px;
+  margin-right: 5px;
 }
