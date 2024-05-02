@@ -486,22 +486,38 @@ p {
   padding: 30px;
 }
 
+#xp .card .col{
+  display: flex;
+}
+
 #xp .card .img-modal{
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
-  border: 5px solid white;
+  border: 5px solid #3685b9;
   border-radius: 200px;
   display: flex;
 }
 
 #xp .card img{
   width: 100%;
+  scale: 0.8;
 }
 
 #xp .card #semisquare{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+}
+
+#xp .card .line{
+  transform: rotate(90deg) translate(65px, 40px);
+  width: 160px;
+  height: 20px;
+}
+
+#xp .card .col .xp-desc{
+  width: auto;
+  transform: translate(-90px, 0);
 }
 
 footer{
