@@ -1,8 +1,4 @@
-//INTERNACIONALIZAÇÃO
-if (navigator.language === 'en-US' && !window.location.href.includes('us')) {
-  window.location.href += '/us'
-}
-
+//VERIFICA CARREGAMENTO COMPLETO DAS IMAGENS
 window.addEventListener('load', function () {
   const AllImages = document.querySelectorAll('img');
 
@@ -37,6 +33,7 @@ document.body.style.overflow = 'hidden';
 var hoje = Date.now() - Date.UTC(2022, 12)
 var conclusaoCursoUninter = (hoje * 100) / (Date.UTC(2025, 6) - Date.UTC(2022, 12))
 
+//SWIPER DE PROJETOS
 var swiper1 = new Swiper(".projectSwiper", {
   effect: "coverflow",
   grabCursor: true,
@@ -60,6 +57,7 @@ var swiper1 = new Swiper(".projectSwiper", {
   }
 })
 
+//INFORMAÇÕES DE CADA PROJETO
 var projectTitle =
   [
     {
@@ -107,6 +105,7 @@ document.getElementById("project-title").innerHTML = "<div class='title'><h1>" +
 
 let transitioning = false;
 
+//VERIFICA SE O SWIPER FOI MODIFICADO
 setInterval(function () {
 
   if (swiper1.animating == true && transitioning == false) {
@@ -132,6 +131,8 @@ setInterval(function () {
   }
 }, 200)
 
+
+//ATUALIZA POSIÇÕES DE ELEMENTOS PERTO DO SWIPER DE PROJETOS
 const divSwiper = document.querySelector('.projectSwiper');
 const divTitle = document.querySelector('.project-title');
 const divCircle = document.querySelector('#container');
@@ -154,6 +155,7 @@ window.addEventListener('resize', atualizaPosicao);
 
 atualizaPosicao();
 
+//ANIMACAO DE BARRA DE PROGRESSO
 var bar = new ProgressBar.Circle(container, {
   strokeWidth: 5,
   easing: 'easeInOut',
@@ -164,7 +166,7 @@ var bar = new ProgressBar.Circle(container, {
 
 bar.animate(1)
 
-//ATIVAR SCROLL NOVAMENTE
+//ATIVAR SCROLL NOVAMENTE E EXIBI A TELA PRINCIPAL
 function enableOverflow() {
   document.body.style.overflow = 'auto';
   gsap.to(".loader-background", {
@@ -176,6 +178,7 @@ function enableOverflow() {
   })
 }
 
+//MODIFICAÇÃO DO TEMA
 let c = 0;
 function toggle() {
   c % 2 == 0 ? day() : night();
@@ -218,3 +221,32 @@ function day() {
 
     bar.path.setAttribute('stroke', 'black')
 }
+
+//OBSERVER PARA ANIMAR ELEMENTOS DA SEÇÃO EXPERIENCIA
+
+const fadeInElements = document.querySelectorAll('.fade-in');
+
+const observerOpts = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+}
+
+const fadeInObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting) {
+      gsap.to(entry.target,{
+        duration: 0.5,
+        x: 0
+      })
+      observer.unobserve(entry.target);
+    }
+  })
+}, observerOpts)
+
+var timeline = new ProgressBar.Path('#timeline', {
+  easing: 'easeInOut',
+  duration: 3500
+})
+
+timeline.animate(1)

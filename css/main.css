@@ -480,6 +480,30 @@ p {
   height: 75px;
 }
 
+#xp .card{
+  background-color: #5a5b5b80;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#xp .card .img-modal{
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border: 5px solid white;
+  border-radius: 200px;
+  display: flex;
+}
+
+#xp .card img{
+  width: 100%;
+}
+
+#xp .card #semisquare{
+  width: 300px;
+  height: 300px;
+}
+
 footer{
   background-color: #0f5482;
   height: 180px;
