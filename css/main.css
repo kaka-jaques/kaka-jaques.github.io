@@ -486,6 +486,11 @@ p {
   padding: 30px;
 }
 
+#xp .card .row{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #xp .card .col{
   display: flex;
 }

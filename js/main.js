@@ -249,12 +249,20 @@ var timeline = new ProgressBar.Path('#timeline', {
   duration: 3500
 })
 
-var line1 = new ProgressBar.Line('#line1', {
+lineOpts = {
   easing: 'easeInOut',
   duration: 2000,
   strokeWidth: 3,
   color: 'black',
-})
+}
+
+var line1 = new ProgressBar.Line('#line1',lineOpts);
+var line2 = new ProgressBar.Line('#line2',lineOpts);
+var line3 = new ProgressBar.Line('#line3',lineOpts);
+var line4 = new ProgressBar.Line('#line4',lineOpts);
 
 timeline.animate(1)
-line1.animate(1)
+line1.animate(1);
+line2.animate(1);
+line3.animate(1);
+line4.animate(1);
